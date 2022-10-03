@@ -7,7 +7,9 @@ public class Lab04avst
 {
     public static void main(String[] args)
     {
-        System.out.println("Lab04a, Student 90 Point Version\n");
+        //90 Point Version  completed 09/30, 100 Point on 10/03
+        System.out.println();
+        System.out.println("Lab04a, Student 100 Point Version\n");
 
         double principal  = 250000;
         double annualRate = 4.85;
@@ -18,9 +20,18 @@ public class Lab04avst
         double numerator = MonthRate * Math.pow(1 + MonthRate, numMonths);
         double denom = Math.pow(1 + MonthRate, numMonths) - 1;
         double MonthPay = numerator/denom * principal;
+        MonthPay *= 100;
+        MonthPay = Math.round(MonthPay);
+        MonthPay /= 100;
         //End of Monthly Pay
         double TotalPay = MonthPay * numMonths;
+        TotalPay *= 100;
+        TotalPay = Math.round(TotalPay);
+        TotalPay /= 100;
         double Totalint = TotalPay - principal;
+        Totalint *= 100;
+        Totalint = Math.round(Totalint);
+        Totalint /= 100;
 
         System.out.println("Principal:\t\t\t" + "$" + principal);
         System.out.println("Annual Rate:\t\t" + annualRate + "%");
